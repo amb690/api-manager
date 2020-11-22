@@ -1,0 +1,13 @@
+server:
+  port: 8900
+spring:
+  application:
+    name: apimanager
+  cloud:
+    config:
+      uri: http://192.168.68.131:8080
+management:
+  health:
+    refresh:
+      enabled: true
+      
