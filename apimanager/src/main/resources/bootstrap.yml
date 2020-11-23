@@ -6,6 +6,8 @@ spring:
   cloud:
     config:
       uri: http://192.168.68.131:8080
+  profiles:
+    active: local
 management:
   health:
     refresh:
