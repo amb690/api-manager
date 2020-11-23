@@ -104,6 +104,7 @@
 				<artifactId>dockerfile-maven-plugin</artifactId>
 				<version>1.4.13</version>
 				<configuration>
+					<googleContainerRegistryEnabled>false</googleContainerRegistryEnabled>
 					<repository>
 						${docker.image.prefix}/${docker.repository}
 					</repository>
