@@ -19,7 +19,7 @@ import com.markettrender.apimanager.model.repository.ApiRepository;
 import com.markettrender.apimanager.service.ApiService;
 
 @SpringBootTest
-public class ApiServiceTest {
+class ApiServiceTest {
 
 	@Autowired
 	private ApiService apiService;
@@ -28,7 +28,7 @@ public class ApiServiceTest {
 	private ApiRepository apiRepo;
 
 	@Test
-	public void testCreateApi() {
+	void testCreateApi() {
 
 		Api mockedApi = new Api();
 		mockedApi.setName("mockedApi");
@@ -41,7 +41,7 @@ public class ApiServiceTest {
 	}
 
 	@Test
-	public void testfindApiById() {
+	void testfindApiById() {
 
 		Api mockedApi = new Api();
 		mockedApi.setName("mockedApi");
@@ -49,26 +49,26 @@ public class ApiServiceTest {
 
 		when(apiRepo.findById(Mockito.anyLong())).thenReturn(optMockedApi);
 
-		Api api = apiService.findById(new Long(5));
+		apiService.findById(new Long(5));
 
 		assertThat(optMockedApi.get().getName()).isEqualTo("mockedApi");
 	}
 
 	@Test
-	public void testfindApiByName() {
+	void testfindApiByName() {
 
 		Api mockedApi = new Api();
 		mockedApi.setName("twitter");
 
 		when(apiRepo.findByName(Mockito.anyString())).thenReturn(mockedApi);
 
-		Api api = apiService.findByName("twitter");
+		apiService.findByName("twitter");
 
 		assertThat(mockedApi.getName()).isEqualTo("twitter");
 	}
 
 	@Test
-	public void testfindAll() {
+	void testfindAll() {
 
 		Api mockedApi = new Api();
 		mockedApi.setName("mockedApi");
@@ -84,7 +84,7 @@ public class ApiServiceTest {
 	}
 
 	@Test
-	public void testDeleteApi() {
+	void testDeleteApi() {
 
 		Api mockedApi = new Api();
 		mockedApi.setName("twitter");
