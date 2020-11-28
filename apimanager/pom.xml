@@ -20,7 +20,7 @@
 		<git.connection>git@github.com:amb690/api-manager.git</git.connection>
 		<docker.image.prefix>albertombln</docker.image.prefix>
 		<docker.repository>api-manager</docker.repository>
-		<sonar.exclusions>src/main/java/com/markettrender/apimanager/model/repository/**, **/test/*Test*.java, src/main/java/com/markettrender/apimanager/ApimanagerApplication.java</sonar.exclusions>
+		<sonar.exclusions>src/main/java/com/markettrender/apimanager/model/repository/**, **/test/*Test*.java, src/main/java/com/markettrender/apimanager/Api</sonar.exclusions>
 	</properties>
 	
 	<distributionManagement>
