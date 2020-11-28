@@ -5,6 +5,7 @@ import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.when;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -32,12 +33,21 @@ class ApiServiceTest {
 
 		Api mockedApi = new Api();
 		mockedApi.setName("mockedApi");
+		mockedApi.setLastPetition(new Date());
+		mockedApi.setId(6L);
+		mockedApi.setMaxPetitions(10000);
+		mockedApi.setNumberOfPetitions(50L);
+		mockedApi.prePersist();
 
 		when(apiRepo.save(Mockito.any(Api.class))).thenReturn(mockedApi);
 
 		Api savedApi = apiService.save(mockedApi);
 
+		assertThat(savedApi.getId()).isEqualTo(6);
 		assertThat(savedApi.getName()).isEqualTo("mockedApi");
+		assertThat(savedApi.getLastPetition()).isNotNull();
+		assertThat(savedApi.getMaxPetitions()).isEqualTo(10000);
+		assertThat(savedApi.getNumberOfPetitions()).isEqualTo(50);
 	}
 
 	@Test
@@ -49,7 +59,7 @@ class ApiServiceTest {
 
 		when(apiRepo.findById(Mockito.anyLong())).thenReturn(optMockedApi);
 
-		apiService.findById(new Long(5));
+		apiService.findById(5L);
 
 		assertThat(optMockedApi.get().getName()).isEqualTo("mockedApi");
 	}
@@ -91,7 +101,7 @@ class ApiServiceTest {
 
 		doNothing().when(apiRepo).deleteById(Mockito.anyLong());
 
-		apiService.delete(new Long(5));
+		apiService.delete(5L);
 
 		assertThat(mockedApi.getName()).isEqualTo("twitter");
 	}

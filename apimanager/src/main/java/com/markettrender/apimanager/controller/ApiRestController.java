@@ -67,12 +67,6 @@ public class ApiRestController {
 		Map<String, Object> response = new HashMap<>();
 
 		if (result.hasErrors()) {
-
-			/*
-			 * List<String> errors = new ArrayList<>(); for (FieldError err :
-			 * result.getFieldErrors()) { errors.add("El campo '" + err.getField() + "' " +
-			 * err.getDefaultMessage()); }
-			 */
 			List<String> errors = result.getFieldErrors().stream()
 					.map(err -> "El campo '" + err.getField() + "' " + err.getDefaultMessage())
 					.collect(Collectors.toList());
@@ -85,7 +79,12 @@ public class ApiRestController {
 			apiNew = apiService.save(api);
 		} catch (DataAccessException e) {
 			response.put("mensaje", "Error al realizar la inserción en la base de datos!");
-			response.put("error", e.getMessage().concat(": ").concat(e.getMostSpecificCause().getMessage()));
+
+			if (null != e.getMessage()) {
+				String errMessage = e.getMessage();
+				response.put("error", errMessage.concat(": ").concat(e.getMostSpecificCause().getMessage()));
+			}
+
 			return new ResponseEntity<>(response, HttpStatus.INTERNAL_SERVER_ERROR);
 		}
 
