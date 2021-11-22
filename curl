@@ -1,0 +1,19 @@
+curl -X POST \
+  http://gateway:8080/mercury/services/scheduler/job/execute/enrollmentjobgts/enrollmentJobGTS \
+  -H 'authorization: Basic YmFua2FkbWluOnVzM3I=' \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/json' \
+  -H 'postman-token: c404aab8-4d92-9c69-1fb0-1757e2d306ed' \
+  -d '{
+	"logBaseDirectory": "/tmp/", 
+	"jobName" : "enrollmentJobGTS", 
+	"path" : "/mercury/services/scheduler/job/execute/enrollmentjobgts/enrollmentJobGTS", 
+	"Max-Logs" : 10000, 
+	"hostname" : "gateway", 
+	"bankid" : "42", 
+	"port" : "8080", 
+	"module" : "enrollmentjobgts", 
+	"onlyGlobalUID" : "false", 
+	"job_class" : "com.mercurytfs.mercury.cloud.integration.jobs.gts.jobs.job.enrollement.EnrollmentJobGTS", 
+	"jobType" : "enrollmentJobGTS"
+}'
