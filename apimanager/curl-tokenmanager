@@ -1,0 +1,4 @@
+curl --location --request POST 'https://gateway-mercury-chile.appls.ocp01.gts.pre.weu1.azure.paas.cloudcenter.corp/mercury/token_service' \
+--header 'Cookie: 02310ca47104dddf9210a65701bf90e7=bacc6b49893655b98ebc465e2b9760fe' \
+--form 'username="bankadmin"' \
+--form 'password="us3r"'
