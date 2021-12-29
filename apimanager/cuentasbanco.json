@@ -39,5 +39,39 @@ curl -X POST \
 	"returnOfDocuments":"N"
 }'
 
+-- bad petition 2
+{
+        "country": "ES",
+        "confirmationInstructions": null,
+        "postponementOrDelay": "N",
+        "freeOfPayments": null,
+        "preReviewOn": "N",
+        "queryDate": "2021-12-29",
+        "agreementId": null,
+        "limit": "",
+        "forewarn": "N",
+        "tolerance": null,
+        "eventId": "collectionsexportissue",
+        "branchId": "ES0049",
+        "amount": "66.0",
+        "productId": "6556010000002",
+        "offset": "",
+        "resource": "N",
+        "transferableLcReference": "null",
+        "protest": "Y",
+        "custumerId": "J101660825",
+        "assigmentOfProcceds": null,
+        "transferProduct": "N",
+        "deferredPayment": null,
+        "cancelationsComission": null,
+        "transfer": null,
+        "discrepancy": null,
+        "exchangeCurrency": "N",
+        "negotiationRejected": "N",
+        "commisionBy": "Librador",
+        "currencyCode": "EUR",
+        "returnOfDocuments": "N"
+    }
+
 -- succesfull petition
 {"country":"ES","confirmationInstructions":null,"postponementOrDelay":"N","freeOfPayments":null,"preReviewOn":"N","queryDate":"2021-12-29","agreementId":"5494CLI9043898","limit":"","forewarn":"N","tolerance":null,"eventId":"cartaPrecios","branchId":"ES00495494","amount":"500.0","productId":"6546010000001","offset":"","resource":"N","transferableLcReference":"null","protest":"N","custumerId":"J101660825","assigmentOfProcceds":null,"transferProduct":"N","deferredPayment":null,"cancelationsComission":null,"transfer":null,"discrepancy":null,"exchangeCurrency":"N","negotiationRejected":"N","commisionBy":"DRAWEE","currencyCode":"EUR","returnOfDocuments":"N"}
