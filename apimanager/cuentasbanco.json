@@ -1,3 +1,4 @@
+-- wrong petition
 curl -X POST \
   'https://shr-cross-references-pricing-gts-core.appls.ocp01.gts.pre.weu1.azure.paas.cloudcenter.corp/prices?accounting_cats=25&company_id=89&active_bank_id=42' \
   -H 'authorization: Bearer eyJraWQiOiJwcmVHdHNNZXJjdXJ5SW50ZXJuZXQiLCJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJjb3VudHJ5IjoiRVNCU0NIRVNNTSIsInN1YiI6ImJhbmt1c2VyIiwiYXVkIjoibWVyY3VyeSIsImxvY2FsX3VpZCI6Im4xMTExMSIsImxvY2FsX3JlYWxtIjoiU1RTU2FuRVNJbnRyYW5ldFByZVYxIiwiaXNzIjoicHJlR3RzSW50ZXJuZXQiLCJwbGF0Zm9ybV9pZCI6InByZUd0c0ludGVybmV0IiwiaWF0IjoxNjQwNjk2ODQ2LCJuYmYiOjE2NDA2OTY4NDYsImp0aSI6ImVmY2Q0N2FiLWM5NDEtNGI2OS1hZTRhLTZjN2E3MzgxZWViNiIsImV4cCI6MTY3MjIzNjg0Nn0.HlVRK5WHBI-xRlpu8A9LCtwVTH3OXKoJIh-1SUV65BZnrLa_SYGD-8nuxbWWWDK1BXyJD6BVnpMNUlWUeABRfIhRZ8g2UyT4UauKKhX88dCyRx_i6HkcFbiw_unnEkseO5lFE3pgCndB-5V81f2U9UQjTrGKKfOLflY8v4bJPC7BmB4bmLkYFzYwfrALOWOjuCVlbSl3YuF_RmVN87L_J4y25zVJtACgV8lox4N4RCmWPSlrjS5wdKWBj8x628Ye9r3eN9moTbBcuA7aQ6fsMkvssSFeOfFSGPK2MErKF5WjSx6bBsJdDcfS0t9vNtnr7ejUUsfHe_2QEaMdZyRiAg' \
@@ -37,3 +38,6 @@ curl -X POST \
 	"currencyCode":"EUR",
 	"returnOfDocuments":"N"
 }'
+
+-- succesfull petition
+{"country":"ES","confirmationInstructions":null,"postponementOrDelay":"N","freeOfPayments":null,"preReviewOn":"N","queryDate":"2021-12-29","agreementId":"5494CLI9043898","limit":"","forewarn":"N","tolerance":null,"eventId":"cartaPrecios","branchId":"ES00495494","amount":"500.0","productId":"6546010000001","offset":"","resource":"N","transferableLcReference":"null","protest":"N","custumerId":"J101660825","assigmentOfProcceds":null,"transferProduct":"N","deferredPayment":null,"cancelationsComission":null,"transfer":null,"discrepancy":null,"exchangeCurrency":"N","negotiationRejected":"N","commisionBy":"DRAWEE","currencyCode":"EUR","returnOfDocuments":"N"}
